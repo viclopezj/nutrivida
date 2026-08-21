@@ -17,6 +17,26 @@
     limpiar();
  }
 
- function calcular(){
-    pantalla.value = Number(pantalla.value) + Number(numero);
+ function resta(){
+    numero = pantalla.value;
+    limpiar();
+ }
+
+ function multiplicacion(){
+    numero = pantalla.value;
+    limpiar();
+ }
+
+ function division(){
+    numero = pantalla.value;
+    limpiar();
+ }
+
+ function calcular()
+    if(function suma){
+        pantalla.value = Number(pantalla.value) + Number(numero);
+    else if(function resta)
+        pantalla.value = Number(pantalla.value) - Number(numero);
+    else if(function multiplicacion)
+        pantalla.value = Number(pantalla.value) * Number(numero);
  }
