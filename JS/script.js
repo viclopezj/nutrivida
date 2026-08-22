@@ -1,5 +1,6 @@
  let pantalla = document.getElementById("pantalla");
  let numero;
+ let operacion;
 
  function agregar(valor){
  if(pantalla.value === "0")
@@ -14,29 +15,36 @@
  
  function suma(){
     numero = pantalla.value;
+    operacion = "+";
     limpiar();
  }
 
  function resta(){
     numero = pantalla.value;
+    operacion = "-";
     limpiar();
  }
 
  function multiplicacion(){
     numero = pantalla.value;
+    operacion = "*";
     limpiar();
  }
 
  function division(){
     numero = pantalla.value;
+    operacion = "/";
     limpiar();
  }
 
- function calcular()
-    if(function suma){
-        pantalla.value = Number(pantalla.value) + Number(numero);
-    else if(function resta)
-        pantalla.value = Number(pantalla.value) - Number(numero);
-    else if(function multiplicacion)
-        pantalla.value = Number(pantalla.value) * Number(numero);
- }
+ function calcular(){
+    if(operacion === "+"){
+        pantalla.value = Number(numero) + Number(pantalla.value);
+    }else if(operacion === "-"){
+        pantalla.value = Number(numero) - Number(pantalla.value);
+    }else if(operacion === "*"){
+        pantalla.value = Number(numero) * Number(pantalla.value);
+    }else if(operacion === "/"){
+        pantalla.value = Number(numero) / Number(pantalla.value);
+    }
+}

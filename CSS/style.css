@@ -40,6 +40,15 @@
     margin-bottom: 20px;
 }
 
+.button{
+    width: 60px;
+    height: 65px; 
+    font-size: 24px; 
+    background-color: white;
+    border: 2px solid #ccc;
+    transition: 0.2s;
+}
+
 .tarjeta{
     background-color: rgb(188, 228, 188);
     border: 4px solid white;
@@ -83,7 +92,7 @@
 
 /*Regla para las etiquetas h2*/
 h2 {
-    text-shadow: 2px 2px 4px darkorange;/*Como el box-shadow, pero da sombra al texto*/
+    text-shadow: 2px 2px 4px green;/*Como el box-shadow, pero da sombra al texto*/
     letter-spacing: 2px;/*Agrega un espacio entre las letras*/
 }
 
@@ -101,4 +110,20 @@ input {
 /*Regla para el texto grande*/
 textarea {
     font-style: italic; /*Cambia el estilo de fuente a cursiva*/
+}
+
+/*Calculadora*/
+
+#calculadora {
+    text-align: center;
+    max-width: 320px;
+    margin: 0 auto; 
+}
+
+#pantalla {
+    width: 250px;
+    font-size: 35px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 15px;
 }
