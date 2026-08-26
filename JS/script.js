@@ -32,9 +32,9 @@
  }
 
  function division(){
-    numero = pantalla.value;
-    operacion = "/";
-    limpiar();
+   numero = pantalla.value; 
+  operacion = "/";
+  limpiar();
  }
 
  function calcular(){
@@ -45,6 +45,10 @@
     }else if(operacion === "*"){
         pantalla.value = Number(numero) * Number(pantalla.value);
     }else if(operacion === "/"){
-        pantalla.value = Number(numero) / Number(pantalla.value);
-    }
+      if(pantalla.value === "0" || Number(pantalla.value) === 0){
+         pantalla.value = "Error";
+      }else{
+         pantalla.value = Number(numero) / Number(pantalla.value);
+      }
+   }
 }
