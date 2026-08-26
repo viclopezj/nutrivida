@@ -33,6 +33,13 @@ body{
     margin: 51px auto;
 }
 
+.contacto{
+    background-color: beige;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
 .seccion{
     background-color: beige;
     padding: 15px;
@@ -100,6 +107,7 @@ h2 {
 button {
     cursor: pointer; /*Cambia la forma del puntero al pasar sobre el botón indicando que es clickeable*/
     font-weight: bold; /*Las letras se muestran en negrita*/
+
 }
 
 /*Regla para las etiquetas de entrada de texto*/
@@ -126,4 +134,57 @@ textarea {
     text-align: right;
     padding: 10px;
     margin-bottom: 15px;
+}
+
+/*Contacto*/
+#contacto {
+    font-size: 18px;
+    border-radius: 28px;
+    border: 3px solid #73AD21;
+    padding: 15px;
+}
+
+#contacto legend {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.submit {
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    font-size: 18px;
+    margin: 4px 2px;
+    border-radius: 12px;
+}
+
+.form {
+    width: 95%;
+    padding: 8px 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.producto {
+    width: 95%;
+    padding: 8px 10px;
+    margin: 5px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.cantidad {
+    padding: 8px 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pago {
+    margin: 5px;
+    transform: scale(1.2);
 }

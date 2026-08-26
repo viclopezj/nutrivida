@@ -13,80 +13,84 @@
 
 	</header>
 
-    <form id ="contacto">
-        <fieldset> <!-- fieldset para agrupar en formulario-->
-            <legend>Formulario de Contacto</legend>
+    <main id ="contenido">
+        <form id ="contacto">
+            <fieldset> <!-- fieldset para agrupar en formulario-->
+                <legend>Formulario de Contacto</legend>
 
-        <label>Nombre: </label> <!-- Label para definir titulo o elemento-->
-        <input type="text"
-            name="nombre"
-            id="nombre"
-            placeholder="Ingrese su nombre" 
-            required>
-            <!-- placehoder: Un texto que sirve como guia
-                 required: Hace necesario escribir algo -->
-    
-    <br></br>
-        <label>Rut: </label>
-        <input type="text"
-            name=="rut"
-            id="rut"
-            placeholder="Formtato 22123456-7"
-            required>
+            <label>Nombre: </label> <!-- Label para definir titulo o elemento-->
+            <input class="form" type="text"
+                name="nombre"
+                id="nombre"
+                placeholder="Ingrese su nombre" 
+                required>
+                <!-- placehoder: Un texto que sirve como guia
+                    required: Hace necesario escribir algo -->
+        
+        <br></br>
+            <label>Rut: </label>
+            <input class="form" type="text"
+                name=="rut"
+                id="rut"
+                placeholder="Formato 22123456-7"
+                required>
 
-    <br></br>
-        <label>Correo Electronico: </label>
-        <input type="email"
-            name=="correo"
-            id="correo"
-            required>
+        <br></br>
+            <label>Correo Electronico: </label>
+            <input class="form" type="email"
+                name=="correo"
+                id="correo"
+                placeholder="usuario@gmail.com"
+                required>
 
-    <br></br>
-        <label>Telefono: </label>
-        <input type="tel"
-            name=="telefono"
-            id="telefono">
+        <br></br>
+            <label>Telefono: </label>
+            <input class="form" type="tel"
+                name=="telefono"
+                id="telefono"
+                value="+56">
 
-    <br></br>
-        <label>Fecha de Nacimiento: </label>
-        <input type="date"
-            name=="fenac"
-            id="fenac">
+        <br></br>
+            <label>Fecha de Nacimiento: </label>
+            <input class="form" type="date"
+                name=="fenac"
+                id="fenac"
+                required>
 
-    <br></br>
-        <label>Productos: </label>
-        <select name="productos" id="productos">
-            <option value="">-- SELECCIONE UN PRODUCTO --</option> <!-- Cambiar a la tematica de tienda de mineria -->
-            <option value="10">Popcorn</option>
-            <option value="20">Chocolate</option>
-            <option value="30">Chiqule</option>
-            <option value="40">Bombones</option>
-            <option value="50">Bebidas</option>
-        </select>
+        <br></br>
+            <label>Productos: </label>
+            <select name="productos" id="productos" class="producto">
+                <option class="producto" value="">-- SELECCIONE UN PRODUCTO --</option> <!-- Cambiar a la tematica de tienda de mineria -->
+                <option class="producto" value="10">Casco de Seguridad Industrial con Barboquejo</option>
+                <option class="producto" value="20">Botas de Seguridad Dielectricas con Punta de Acero</option>
+                <option class="producto" value="30">Guantes Anti-impacto y Corte Nivel 5</option>
+                <option class="producto" value="40">Overol de Trabajo Altamente Reflectivo</option>
+                <option class="producto" value="50">Arnés de Seguridad Anti-caídas de 4 Puntos</option>
+            </select>
 
-    <br></br>
-        <label>Cantidad: </label>
-        <input type="number"
-            name="cantidad"
-            id="cantidad"
-            min="10"
-            max="99"
-            value="10">
+        <br></br>
+            <label>Cantidad: </label>
+            <input class="cantidad" type="number"
+                name="cantidad"
+                id="cantidad"
+                min="1"
+                max="99"
+                value="1">
 
-    <br></br>
-        <label>Forma de pago: </label>
-        <br><br>
-        <label>Debito: </label>
-        <input type="radio" name="fdepago" value="debito">
-        <label>Credito: </label>
-        <input type="radio" name="fdepago" value="credito">
-        <label>Efectivo: </label>
-        <input type="radio" name="fdepago" value="efectivo">
-    
-    <br></br>
-        <button type="submit">ENVIAR</button>
-        </fieldset>
-    </form>
+        <br></br>
+            <label>Forma de pago: </label>
+            <br><br>
+            <label>Debito: </label>
+            <input class="pago" type="radio" name="fdepago" value="debito">
+            <label>Credito: </label>
+            <input class="pago" type="radio" name="fdepago" value="credito">
+            <label>Efectivo: </label>
+            <input class="pago" type="radio" name="fdepago" value="efectivo">
+        
+        <br></br>
+            <button class="submit" type="submit">ENVIAR</button>
+            </fieldset>
+        </form>
     <script = src="JS/validaform.js"></script>
 </body>
 </html>
