@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Catálogo de Compras</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/productos.css">
+
+	</head>
+	<body>
+
+		<header id="encabezado">
+			<h1>Álbum de Ejemplo</h1>
+			<p>Una galería simple con HTML5 y CSS</p>
+
+			<nav id="menu-principal">
+				<ul>
+					<li><a href="index.html#inicio">Inicio</a></li>
+					<li><a href="index.html#album">Álbum</a></li>
+					<li><a href="catalogo.html">Catálogo de Compras</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+					<li><a href="calculadora.html">Calculadora</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="catalogo-compras">
+
+			<section class="seccion">
+				<h2>Catálogo de Compras</h2>
+				<p>Busca, filtra y encuentra las herramientas mineras que necesitas.</p>
+			</section>
+
+			<div class="catalogo-layout">
+
+				<aside class="filtro-sidebar">
+
+					<!-- Buscador -->
+					<div class="filtro-grupo">
+						<input type="search" id="buscador" placeholder="Buscar artículo...">
+					</div>
+
+					<div class="filtro-grupo">
+						<h3>Categorías</h3>
+
+						<details class="categoria" open>
+							<summary>Perforación</summary>
+							<label><input type="checkbox" class="chk-categoria" value="brocas"> Brocas</label><br>
+							<label><input type="checkbox" class="chk-categoria" value="triconos"> Triconos</label>
+						</details>
+
+						<details class="categoria">
+							<summary>Corte</summary>
+							<label><input type="checkbox" class="chk-categoria" value="coronas"> Coronas diamantadas</label><br>
+							<label><input type="checkbox" class="chk-categoria" value="discos"> Discos de corte</label>
+						</details>
+
+						<details class="categoria">
+							<summary>Accesorios</summary>
+							<label><input type="checkbox" class="chk-categoria" value="repuestos"> Repuestos</label><br>
+							<label><input type="checkbox" class="chk-categoria" value="manuales"> Herramientas manuales</label>
+						</details>
+					</div>
+
+					<div class="filtro-grupo">
+						<h3>Precio</h3>
+						<label>Mínimo: <input type="number" id="precio-min" min="0" placeholder="0"></label><br>
+						<label>Máximo: <input type="number" id="precio-max" min="0" placeholder="999999"></label>
+					</div>
+
+					<div class="filtro-grupo">
+						<h3>Marca</h3>
+						<label><input type="checkbox" class="chk-marca" value="Proceq"> Proceq</label><br>
+						<label><input type="checkbox" class="chk-marca" value="Dana"> Dana</label><br>
+						<label><input type="checkbox" class="chk-marca" value="Boart Longyear"> Boart Longyear</label><br>
+						<label><input type="checkbox" class="chk-marca" value="Sandvik"> Sandvik</label>
+					</div>
+
+					<div class="filtro-grupo">
+						<h3>Disponibilidad</h3>
+						<label><input type="checkbox" class="chk-disp" value="web"> Solo web</label><br>
+						<label><input type="checkbox" class="chk-disp" value="tienda"> Solo tienda</label>
+					</div>
+
+					<button id="limpiar-filtros" type="button">Limpiar filtros</button>
+				</aside>
+
+				<!-- ===================== RESULTADOS ===================== -->
+				<section class="catalogo-resultados">
+
+					<div class="barra-orden">
+						<span id="contador-resultados"></span>
+						<label for="orden">Ordenar por:</label>
+						<select id="orden">
+							<option value="relevancia">Relevancia</option>
+							<option value="precio-asc">Precio: menor a mayor</option>
+							<option value="precio-desc">Precio: mayor a menor</option>
+							<option value="nombre">Nombre A-Z</option>
+						</select>
+					</div>
+
+					<div class="productos-grid" id="productos-grid">
+					</div>
+
+					<div class="paginacion" id="paginacion">
+					</div>
+
+				</section>
+
+			</div>
+
+		</main>
+
+		<footer id="pie">
+			<p><small>&copy; 2025 Álbum de Ejemplo - Todos los derechos reservados</small></p>
+		</footer>
+
+        <script src="JS/productos.js"></script>
+	</body>
+</html>
