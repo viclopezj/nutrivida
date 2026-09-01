@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Nutrivida</title>
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/productos.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
@@ -18,6 +19,7 @@
 			<a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Inicio</a> 
 			<a href="productos.html"><i class="fa fa-fw fa-shopping-cart"></i> Catálogo de Compras</a>
 			<a href="login.html" class="split"><i class="fa fa-fw fa-user"></i> Iniciar Sesion</a>
+			<span class="carrito-contador"><i class="fa fa-fw fa-shopping-basket"></i> Carrito (<span id="carrito-num">0</span>)</span>
 		</nav>
 
 			<div class="bg-img"></div>
@@ -127,5 +129,7 @@
 		<footer id="pie">
 			<p><small>&copy; 2026 NutriVida - Todos los derechos reservados</small></p>
 		</footer>
+
+		<script src="JS/carrito.js"></script>
 	</body>
 </html>

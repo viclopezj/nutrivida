@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto</title>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Producto - Nutrivida</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/productos.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+
+		<header id="encabezado">
+			<h1>Nutrivida</h1>
+			<p>Una tienda de productos naturales para una vida saludable</p>
+		</header>
+
+		<nav class="topnav">
+			<a href="index.html"><i class="fa fa-fw fa-home"></i> Inicio</a>
+			<a class="active" href="productos.html"><i class="fa fa-fw fa-shopping-cart"></i> Catálogo de Compras</a>
+			<a href="login.html" class="split"><i class="fa fa-fw fa-user"></i> Iniciar Sesion</a>
+			<span class="carrito-contador"><i class="fa fa-fw fa-shopping-basket"></i> Carrito (<span id="carrito-num">0</span>)</span>
+		</nav>
+
+		<main id="contenido">
+
+			<p class="migas"><a href="index.html">Inicio</a> &gt; <a href="productos.html">Productos</a> &gt; <span id="categoria-producto"></span></p>
+
+			<section class="seccion producto-detalle">
+
+				<div class="galeria-producto">
+					<img id="imagen-principal" src="" alt="">
+					<div class="miniaturas" id="miniaturas"></div>
+				</div>
+
+				<div class="info-producto">
+					<h2 id="nombre-producto"></h2>
+					<p class="producto-precio" id="precio-producto"></p>
+					<p id="descripcion-producto"></p>
+
+					<label for="cantidad-producto">Cantidad:</label>
+					<input class="cantidad" type="number" id="cantidad-producto" min="1" max="99" value="1">
+
+					<br><br>
+					<button class="submit" id="btn-agregar-carrito">Añadir al carrito</button>
+					<p id="mensaje-agregado" class="mensaje-agregado"></p>
+				</div>
+
+			</section>
+
+			<section class="seccion">
+				<h3>Productos relacionados</h3>
+				<div class="relacionados-grid" id="relacionados-grid"></div>
+			</section>
+
+		</main>
+
+		<footer id="pie">
+			<p><small>&copy; 2026 NutriVida - Todos los derechos reservados</small></p>
+		</footer>
+
+        <script src="JS/productos-data.js"></script>
+        <script src="JS/carrito.js"></script>
+        <script src="JS/producto.js"></script>
+	</body>
 </html>

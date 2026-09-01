@@ -1,108 +1,21 @@
-/* ============================================================
-   CSS del Catálogo de Compras
-   6 reglas nuevas (distintos tipos de selector) y
-   10 estilos/propiedades nuevas respecto a style.css
-   ============================================================ */
+/* Estilos del Catálogo de Compras y detalle de producto */
 
-/* 1) Selector de ID -> nuevo estilo: display: grid + gap (propiedad #1 nueva) */
-#catalogo-compras{
-    display: grid;                 /* NUEVO ESTILO 1: grid en vez de flex */
-    margin: 20px auto;
-    max-width: 1200px;
-    padding: 0 15px;
-}
-
-/* 2) Selector de clase -> sidebar de filtros */
-.filtro-sidebar{
-    background-color: beige;
-    border-radius: 10px;
-    padding: 15px;
-    width: 240px;
-    flex-shrink: 0;                 /* NUEVO ESTILO 2: flex-shrink */
-    position: sticky;               /* NUEVO ESTILO 3: position */
-    top: 10px;                      /* NUEVO ESTILO 4: top */
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.2); /* NUEVO ESTILO 5: box-shadow */
-    height: fit-content;
-}
-
-/* 3) Selector de etiqueta (tag) -> alinea sidebar y resultados */
-aside{
-    order: -1;                      /* NUEVO ESTILO 6: order */
-}
-
-.catalogo-layout{
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-}
-
-.filtro-grupo{
-    margin-bottom: 18px;
-}
-
-.filtro-grupo h3{
-    margin-bottom: 6px;
-    text-transform: uppercase;      /* NUEVO ESTILO 7: text-transform */
-    letter-spacing: 1px;            /* NUEVO ESTILO 8: letter-spacing */
-    font-size: 14px;
-}
-
-#buscador{
-    width: 100%;
-    box-sizing: border-box;
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #999;
-}
-
-.categoria summary{
-    cursor: pointer;                /* NUEVO ESTILO 9: cursor */
-    font-weight: bold;
-    margin-bottom: 4px;
-}
-
-/* 4) Selector de atributo -> checkboxes de los filtros */
-input[type="checkbox"]{
-    accent-color: #24c148;
-    margin-right: 4px;
-}
-
-/* 5) Pseudo-clase -> resalta la categoría abierta */
-.categoria[open] summary{
-    color: #24c148;
-}
-
-#limpiar-filtros{
-    width: 100%;
-    padding: 8px;
-    background-color: #24c148;
+.carrito-contador{
+    float: right;
     color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-#limpiar-filtros:hover{
-    background-color: aqua;
-}
-
-.catalogo-resultados{
-    flex-grow: 1;
-}
-
-.barra-orden{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+    padding: 14px 16px;
+    font-size: 15px;
 }
 
 .productos-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* NUEVO ESTILO 10: grid-template-columns */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 15px;
 }
 
-/* 6) Combinador descendiente/hover -> tarjeta de producto */
 .producto-tarjeta{
     background-color: rgb(188, 228, 188);
     border: 4px solid white;
@@ -113,12 +26,17 @@ input[type="checkbox"]{
 }
 .producto-tarjeta:hover{
     background-color: aqua;
-    transform: scale(1.03);         /* transform reutiliza propiedad ya listada arriba */
+    transform: scale(1.03);
+}
+
+.producto-link{
+    color: inherit;
+    text-decoration: none;
 }
 
 .producto-tarjeta img{
     width: 100%;
-    height: 130px;
+    height: 160px;
     object-fit: cover;
     border-radius: 4px;
 }
@@ -126,44 +44,112 @@ input[type="checkbox"]{
 .producto-precio{
     font-weight: bold;
     color: #1a7d33;
+    font-size: 18px;
 }
 
-.producto-disponibilidad{
-    font-size: 12px;
+.btn-agregar{
     background-color: #24c148;
     color: white;
-    border-radius: 10px;
-    padding: 2px 8px;
-    display: inline-block;
-}
-
-.paginacion{
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    margin-top: 20px;
-}
-
-.paginacion button{
-    padding: 6px 12px;
-    border: 1px solid #24c148;
-    background-color: white;
-    color: #24c148;
+    border: none;
+    padding: 8px 20px;
     border-radius: 6px;
-    cursor: pointer;
+    font-size: 15px;
+}
+.btn-agregar:hover{
+    background-color: #1a7d33;
 }
 
-.paginacion button.activo{
-    background-color: #24c148;
-    color: white;
+/* ===== Detalle de producto (Figura 9) ===== */
+
+.migas{
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    padding: 0 15px;
+}
+.migas a{
+    color: #1a7d33;
+    text-decoration: none;
+}
+
+.producto-detalle{
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.galeria-producto{
+    flex: 1 1 400px;
+}
+
+#imagen-principal{
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 4px solid white;
+}
+
+.miniaturas{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.miniaturas img{
+    width: 80px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.miniaturas img.activa{
+    border-color: #24c148;
+}
+
+.info-producto{
+    flex: 1 1 300px;
+}
+
+.mensaje-agregado{
+    color: #1a7d33;
+    font-weight: bold;
+}
+
+.relacionados-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.relacionado-tarjeta{
+    background-color: rgb(188, 228, 188);
+    border: 4px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+    display: block;
+}
+.relacionado-tarjeta:hover{
+    background-color: aqua;
+}
+
+.relacionado-tarjeta img{
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 @media (max-width: 700px){
-    .catalogo-layout{
+    .producto-detalle{
         flex-direction: column;
-    }
-    .filtro-sidebar{
-        width: auto;
-        position: static;
     }
 }
