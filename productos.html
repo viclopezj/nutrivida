@@ -3,119 +3,41 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Catálogo de Compras</title>
+		<title>Catálogo de Compras - Nutrivida</title>
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="stylesheet" href="CSS/productos.css">
-
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
 
 		<header id="encabezado">
-			<h1>Álbum de Ejemplo</h1>
-			<p>Una galería simple con HTML5 y CSS</p>
-
-			<nav id="menu-principal">
-				<ul>
-					<li><a href="index.html#inicio">Inicio</a></li>
-					<li><a href="index.html#album">Álbum</a></li>
-					<li><a href="catalogo.html">Catálogo de Compras</a></li>
-					<li><a href="contacto.html">Contacto</a></li>
-					<li><a href="calculadora.html">Calculadora</a></li>
-				</ul>
-			</nav>
+			<h1>Nutrivida</h1>
+			<p>Una tienda de productos naturales para una vida saludable</p>
 		</header>
 
-		<main id="catalogo-compras">
+		<nav class="topnav">
+			<a href="index.html"><i class="fa fa-fw fa-home"></i> Inicio</a>
+			<a class="active" href="productos.html"><i class="fa fa-fw fa-shopping-cart"></i> Catálogo de Compras</a>
+			<a href="login.html" class="split"><i class="fa fa-fw fa-user"></i> Iniciar Sesion</a>
+			<span class="carrito-contador"><i class="fa fa-fw fa-shopping-basket"></i> Carrito (<span id="carrito-num">0</span>)</span>
+		</nav>
 
+		<main id="contenido">
 			<section class="seccion">
 				<h2>Catálogo de Compras</h2>
-				<p>Busca, filtra y encuentra las herramientas mineras que necesitas.</p>
+				<p>Conoce nuestros productos naturales para complementar tu alimentación diaria.</p>
 			</section>
 
-			<div class="catalogo-layout">
-
-				<aside class="filtro-sidebar">
-
-					<!-- Buscador -->
-					<div class="filtro-grupo">
-						<input type="search" id="buscador" placeholder="Buscar artículo...">
-					</div>
-
-					<div class="filtro-grupo">
-						<h3>Categorías</h3>
-
-						<details class="categoria" open>
-							<summary>Perforación</summary>
-							<label><input type="checkbox" class="chk-categoria" value="brocas"> Brocas</label><br>
-							<label><input type="checkbox" class="chk-categoria" value="triconos"> Triconos</label>
-						</details>
-
-						<details class="categoria">
-							<summary>Corte</summary>
-							<label><input type="checkbox" class="chk-categoria" value="coronas"> Coronas diamantadas</label><br>
-							<label><input type="checkbox" class="chk-categoria" value="discos"> Discos de corte</label>
-						</details>
-
-						<details class="categoria">
-							<summary>Accesorios</summary>
-							<label><input type="checkbox" class="chk-categoria" value="repuestos"> Repuestos</label><br>
-							<label><input type="checkbox" class="chk-categoria" value="manuales"> Herramientas manuales</label>
-						</details>
-					</div>
-
-					<div class="filtro-grupo">
-						<h3>Precio</h3>
-						<label>Mínimo: <input type="number" id="precio-min" min="0" placeholder="0"></label><br>
-						<label>Máximo: <input type="number" id="precio-max" min="0" placeholder="999999"></label>
-					</div>
-
-					<div class="filtro-grupo">
-						<h3>Marca</h3>
-						<label><input type="checkbox" class="chk-marca" value="Proceq"> Proceq</label><br>
-						<label><input type="checkbox" class="chk-marca" value="Dana"> Dana</label><br>
-						<label><input type="checkbox" class="chk-marca" value="Boart Longyear"> Boart Longyear</label><br>
-						<label><input type="checkbox" class="chk-marca" value="Sandvik"> Sandvik</label>
-					</div>
-
-					<div class="filtro-grupo">
-						<h3>Disponibilidad</h3>
-						<label><input type="checkbox" class="chk-disp" value="web"> Solo web</label><br>
-						<label><input type="checkbox" class="chk-disp" value="tienda"> Solo tienda</label>
-					</div>
-
-					<button id="limpiar-filtros" type="button">Limpiar filtros</button>
-				</aside>
-
-				<!-- ===================== RESULTADOS ===================== -->
-				<section class="catalogo-resultados">
-
-					<div class="barra-orden">
-						<span id="contador-resultados"></span>
-						<label for="orden">Ordenar por:</label>
-						<select id="orden">
-							<option value="relevancia">Relevancia</option>
-							<option value="precio-asc">Precio: menor a mayor</option>
-							<option value="precio-desc">Precio: mayor a menor</option>
-							<option value="nombre">Nombre A-Z</option>
-						</select>
-					</div>
-
-					<div class="productos-grid" id="productos-grid">
-					</div>
-
-					<div class="paginacion" id="paginacion">
-					</div>
-
-				</section>
-
+			<div class="productos-grid" id="productos-grid">
 			</div>
-
 		</main>
 
 		<footer id="pie">
-			<p><small>&copy; 2025 Álbum de Ejemplo - Todos los derechos reservados</small></p>
+			<p><small>&copy; 2026 NutriVida - Todos los derechos reservados</small></p>
 		</footer>
 
+        <script src="JS/productos-data.js"></script>
+        <script src="JS/carrito.js"></script>
         <script src="JS/productos.js"></script>
 	</body>
 </html>
