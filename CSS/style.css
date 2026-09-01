@@ -1,0 +1,247 @@
+/*Style*/
+#encabezado{
+    background-color: #24c148;
+    color: white;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 0;
+    display: flex;          /* Ubica los elementos uno al lado del otro */
+    align-items: center;    /* Centra verticalmente el título y el párrafo */
+    gap: 25px;              /* Espacio de separación entre el título y el texto */
+}
+
+#encabezado h1 {
+    font-size: 38px;        /* Aumenta el tamaño del título Nutrivida */
+    margin: 0;              /* Elimina el espacio sobrante por defecto */
+}
+
+#encabezado p {
+    margin: 0;              /* Elimina el espacio sobrante por defecto */
+    font-size: 15px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif ;/*Cambia la fuente de letra*/
+    background-color: white;/*Cambia el color de fondo*/
+    padding: 0; /*Crea un espacio DENTRO de los elementos*/
+    margin: 0; /*Crea un espacio ALREDEDOR de los elementos*/
+}
+
+#pie{
+    background-color: #24c148;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  position: sticky;  
+  top: 0;
+  overflow: hidden;
+  background-color: #333;
+  z-index: 1000;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Create a right-aligned (split) link inside the navigation bar */
+.topnav a.split {
+  float: right;
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+/*Index*/
+.bg-img {
+  /* The image used */
+  background-image: url("../IMG/banner.jpg");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+#contenido{
+    max-width: 1200px;
+    margin: 51px auto;
+}
+
+.contacto{
+    background-color: beige;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.seccion{
+    background-color: beige;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.button{
+    width: 60px;
+    height: 65px; 
+    font-size: 24px; 
+    background-color: white;
+    border: 2px solid #ccc;
+    transition: 0.2s;
+}
+
+.tarjeta{
+    background-color: rgb(188, 228, 188);
+    border: 4px solid white;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;   
+}
+
+.galeria{
+    display: flex;
+    gap: 10px; 
+    flex-wrap: wrap; /*Se usa para acomodar a medida que se llenen los espacios el objeto quedara abajo*/
+    justify-content: center; /*El contenido se centra al medio*/
+}
+
+
+.espacio-imagen{
+    width: 100%; /*Anchura del espacio*/
+    height: 150px; /*Altura del espacio*/
+}
+
+
+/*Regla para ID Nosotros*/
+#Nosotros {
+    box-shadow: 5px 8px 10px gray; /*Crea una sombra detras de la seccion, se indica la sombra y color*/
+    opacity: 0.8; /*Controla la tranparencia de un elemento. 1 es solido y 0 es invisible*/
+}
+
+/*Regla para ID Actualidad*/
+#Actualidad {
+    line-height: 2; /*Aumenta el interlineado que hay entre una linea de texto y la de abajo*/
+    text-transform: uppercase; /*Todo el texto se convierte a mayúsculas*/
+}
+
+/*Regla para las etiquetas h2*/
+h2 {
+    text-shadow: 2px 2px 4px green;/*Como el box-shadow, pero da sombra al texto*/
+    letter-spacing: 2px;/*Agrega un espacio entre las letras*/
+}
+
+/*Regla para las etiquetas de botón*/
+button {
+    cursor: pointer; /*Cambia la forma del puntero al pasar sobre el botón indicando que es clickeable*/
+    font-weight: bold; /*Las letras se muestran en negrita*/
+
+}
+
+/*Regla para las etiquetas de entrada de texto*/
+input {
+    font-size: 16px; /*Cambia el tamaño de la fuente de los formularios de texto*/
+}
+
+/*Regla para el texto grande*/
+textarea {
+    font-style: italic; /*Cambia el estilo de fuente a cursiva*/
+}
+
+/*Calculadora*/
+
+#calculadora {
+    text-align: center;
+    max-width: 320px;
+    margin: 0 auto; 
+}
+
+#pantalla {
+    width: 250px;
+    font-size: 35px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/*Registro*/
+#registro {
+    font-size: 18px;
+    border-radius: 28px;
+    border: 3px solid #73AD21;
+    padding: 15px;
+}
+
+#registro legend {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.submit {
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    padding: 10px 50px;
+    font-size: 18px;
+    margin: 4px 2px;
+    border-radius: 12px;
+}
+
+.form {
+    width: 95%;
+    padding: 8px 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.producto {
+    width: 95%;
+    padding: 8px 10px;
+    margin: 5px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.cantidad {
+    padding: 8px 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pago {
+    margin: 5px;
+    transform: scale(1.2);
+}

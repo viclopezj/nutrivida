@@ -1,0 +1,169 @@
+/* ============================================================
+   CSS del Catálogo de Compras
+   6 reglas nuevas (distintos tipos de selector) y
+   10 estilos/propiedades nuevas respecto a style.css
+   ============================================================ */
+
+/* 1) Selector de ID -> nuevo estilo: display: grid + gap (propiedad #1 nueva) */
+#catalogo-compras{
+    display: grid;                 /* NUEVO ESTILO 1: grid en vez de flex */
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+/* 2) Selector de clase -> sidebar de filtros */
+.filtro-sidebar{
+    background-color: beige;
+    border-radius: 10px;
+    padding: 15px;
+    width: 240px;
+    flex-shrink: 0;                 /* NUEVO ESTILO 2: flex-shrink */
+    position: sticky;               /* NUEVO ESTILO 3: position */
+    top: 10px;                      /* NUEVO ESTILO 4: top */
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2); /* NUEVO ESTILO 5: box-shadow */
+    height: fit-content;
+}
+
+/* 3) Selector de etiqueta (tag) -> alinea sidebar y resultados */
+aside{
+    order: -1;                      /* NUEVO ESTILO 6: order */
+}
+
+.catalogo-layout{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.filtro-grupo{
+    margin-bottom: 18px;
+}
+
+.filtro-grupo h3{
+    margin-bottom: 6px;
+    text-transform: uppercase;      /* NUEVO ESTILO 7: text-transform */
+    letter-spacing: 1px;            /* NUEVO ESTILO 8: letter-spacing */
+    font-size: 14px;
+}
+
+#buscador{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #999;
+}
+
+.categoria summary{
+    cursor: pointer;                /* NUEVO ESTILO 9: cursor */
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* 4) Selector de atributo -> checkboxes de los filtros */
+input[type="checkbox"]{
+    accent-color: #24c148;
+    margin-right: 4px;
+}
+
+/* 5) Pseudo-clase -> resalta la categoría abierta */
+.categoria[open] summary{
+    color: #24c148;
+}
+
+#limpiar-filtros{
+    width: 100%;
+    padding: 8px;
+    background-color: #24c148;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#limpiar-filtros:hover{
+    background-color: aqua;
+}
+
+.catalogo-resultados{
+    flex-grow: 1;
+}
+
+.barra-orden{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.productos-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* NUEVO ESTILO 10: grid-template-columns */
+    gap: 15px;
+}
+
+/* 6) Combinador descendiente/hover -> tarjeta de producto */
+.producto-tarjeta{
+    background-color: rgb(188, 228, 188);
+    border: 4px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+.producto-tarjeta:hover{
+    background-color: aqua;
+    transform: scale(1.03);         /* transform reutiliza propiedad ya listada arriba */
+}
+
+.producto-tarjeta img{
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.producto-precio{
+    font-weight: bold;
+    color: #1a7d33;
+}
+
+.producto-disponibilidad{
+    font-size: 12px;
+    background-color: #24c148;
+    color: white;
+    border-radius: 10px;
+    padding: 2px 8px;
+    display: inline-block;
+}
+
+.paginacion{
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 20px;
+}
+
+.paginacion button{
+    padding: 6px 12px;
+    border: 1px solid #24c148;
+    background-color: white;
+    color: #24c148;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.paginacion button.activo{
+    background-color: #24c148;
+    color: white;
+}
+
+@media (max-width: 700px){
+    .catalogo-layout{
+        flex-direction: column;
+    }
+    .filtro-sidebar{
+        width: auto;
+        position: static;
+    }
+}
