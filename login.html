@@ -18,6 +18,44 @@
 			<a href="productos.html"><i class="fa fa-fw fa-shopping-cart"></i> Catálogo de Compras</a>
 			<a href="login.html" class="split"><i class="fa fa-fw fa-user"></i> Iniciar Sesion</a>
 		</nav>
-    
+		
+		<main id ="contenido">
+        <form id ="inicio">
+            <fieldset> <!-- fieldset para agrupar en formulario-->
+                <legend>Iniciar Sesion</legend>
+
+			<div class="user-brand">
+    			<i class="fa fa-user user-icono" aria-hidden="true"></i>
+    		</div>
+
+			<br></br>
+				<label>Correo Electronico: </label>
+				<input class="ini" type="email"
+					name=="correo"
+					id="correo"
+					placeholder="usuario@gmail.com"
+					required>
+			
+			<br></br>
+				<label>Contraseña: </label>
+				<input class="ini" type="password"
+					name=="contrasenia"
+					id="contrasenia"
+					required>
+			<br></br>
+
+			<label class="mostrar-pass">
+                <input type="checkbox" onclick="mostrar()"> Mostrar Contraseña
+            </label>	
+
+			<button class="btn-inicio" type="submit">Iniciar Sesion</button>
+
+			<p class="texto-registro">
+                ¿No tiene cuenta? <a href="registro.html">Regístrese ahora</a>
+            </p>
+
+			</fieldset>
+        </form>
+    <script src="JS/validainicio.js"></script>
 </body>
 </html>
