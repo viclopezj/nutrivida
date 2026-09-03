@@ -4,6 +4,7 @@ const producto = productos.find(p => p.id === idProducto) || productos[0];
 
 document.getElementById("nombre-producto").textContent = producto.nombre;
 document.getElementById("categoria-producto").textContent = producto.categoria;
+document.getElementById("categoria-badge").textContent = producto.categoria;
 document.title = producto.nombre + " - NutriVida";
 document.getElementById("precio-producto").textContent = formatoPrecio(producto.precio);
 document.getElementById("descripcion-producto").textContent = producto.descripcion;

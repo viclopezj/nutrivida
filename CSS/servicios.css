@@ -1,9 +1,4 @@
-:root {
-    --verde-oscuro: #145c43;
-    --verde-oscuro-hover: #1d7a58;
-    --verde-suave: #eaf5ef;
-    --crema: #faf8f3;
-}
+/* Variables de color definidas de forma centralizada en style.css */
 
 #planes-intro h2,
 .plan-info h3,
