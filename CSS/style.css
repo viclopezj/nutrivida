@@ -1,6 +1,6 @@
     /*Style*/
     #encabezado{
-        background-color: #24c148;
+        background-color: #04AA6D;
         color: white;
         padding: 25px 50px;
         display: flex;
@@ -9,11 +9,22 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
+    .seccion {
+        background-color: #f9f9f9;
+        border: 1px solid;
+        padding: 20px 32px;       /* Reduce el relleno interno (alto y ancho del bloque) */
+        border-radius: 16px;
+        margin-bottom: 24px;
+        box-shadow: 0 3px 12px rgba(20, 92, 67, 0.06);
+    }
+
+
     /* Agrupación vertical del logo e ícono */
     .header-brand {
         display: flex;
         flex-direction: row-reverse;
-        align-items: center; /* Centra el ícono arriba de la palabra Nutrivida */
+        align-items: center;
+        gap: 10px; 
     }
 
     /* Estilo del título principal */
@@ -33,19 +44,28 @@
         font-family: Arial, Helvetica, sans-serif ;/*Cambia la fuente de letra*/
         background-color: white;/*Cambia el color de fondo*/
         padding: 0; /*Crea un espacio DENTRO de los elementos*/
-        margin: 0; /*Crea un espacio ALREDEDOR de los elementos*/;
+        margin: 0; /*Crea un espacio ALREDEDOR de los elementos*/
+        color: #333;
+    }
+
+    #contenido{ /*Main Id*/
+        max-width: 1200px;
+        margin: 51px auto;
+    }
+
+    button{
+        cursor: pointer;
     }
 
     #pie{
-        background-color: #24c148;
+        background-color: #04AA6D;
         text-align: center;
-        padding: 40px;
+        padding: 34px 20px;
         color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        text-align: center;
     }
 
     #pie h1{
@@ -59,13 +79,13 @@
     }
 
     .footer-logo h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #c0df36; /* Verde lima/amarillento */
-    margin: 0;
-    text-shadow: none; /* Elimina la sombra de texto por defecto */
-    letter-spacing: 1px;
-}
+        font-size: 36px;
+        font-weight: bold;
+        color: #c0df36; /* Verde lima/amarillento */
+        margin: 0;
+        text-shadow: none; /* Elimina la sombra de texto por defecto */
+        letter-spacing: 1px;
+        }
 
     .button{
         width: 60px;
@@ -113,403 +133,23 @@
         background-color: #ddd;
         color: black;
     }
-    
-    /*Regla para las etiquetas h2*/
+
+    /*Reglas para las etiquetas h2 y h3*/
     h2 {
         font-size: 25px;
-        text-shadow: 2px 2px 4px green;/*Como el box-shadow, pero da sombra al texto*/
+        font-weight: 600;
         letter-spacing: 2px;/*Agrega un espacio entre las letras*/
-    }
-
-    /*Regla para las etiquetas de botón*/
-    button {
-        cursor: pointer; /*Cambia la forma del puntero al pasar sobre el botón indicando que es clickeable*/
-        font-weight: bold; /*Las letras se muestran en negrita*/
-
-    }
-
-    /*Regla para las etiquetas de entrada de texto*/
-    input {
-        font-size: 16px; /*Cambia el tamaño de la fuente de los formularios de texto*/
-    }
-
-    /*Regla para el texto grande*/
-    textarea {
-        font-style: italic; /*Cambia el estilo de fuente a cursiva*/
-    }
-
-    /*Index*/
-
-    .bg-img {
-    /* The image used */
-    background-image: url("../IMG/banner.jpg");
-    min-height: 380px;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* Needed to position the navbar */
-    position: relative;
-    }
-
-    #contenido{
-        max-width: 1200px;
-        margin: 51px auto;
-    }
-
-    #Inicio p{
-        font-size: 20px;
-        line-height: 1.5;
-    }
-
-    .contacto{
-        background-color: beige;
-        padding: 15px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-
-    /* Bloque centrado con tamaño de video original y texto grande */
-    #Nutricionista {
-        display: flex;
-        flex-direction: row;        /* Video a la izquierda, texto a la derecha */
-        justify-content: center;    /* Centra el bloque entero en la pantalla */
-        align-items: center;        /* Centra verticalmente el video y el texto */
-        gap: 30px;                  /* Espacio entre el video y el texto */
-        padding: 15px 20px;
-    }
-
-    .nutri-video {
-        flex: 0 0 auto;
-        display: flex;
-        justify-content: center;
-    }
-
-    .nutri-video video {
-        width: 100%;
-        max-width: 400px;          /* Restaura el tamaño grande del video de antes */
-        height: auto;               /* Respeta la proporción natural sin recortar */
-        border-radius: 8px;
-        background-color: #000;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    .nutri-texto {
-        max-width: 650px;           /* Limita el ancho horizontal para que el texto salte a más líneas */
-        text-align: left;
-    }
-
-    .nutri-texto h2 {
-        font-size: 40px;            /* Tamaño grande del título */
-        margin-top: 20px;
-        margin-bottom: 50px;
-    }
-
-    .nutri-texto p {
-        font-size: 24px;            /* Tamaño grande del texto */
-        line-height: 1.5;
-        margin: 0;
-    }
-
-    .seccion {
-        background-color: beige;
-        padding: 10px 18px;       /* Reduce el relleno interno (alto y ancho del bloque) */
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-
-    .tarjeta{
-        background-color: rgb(188, 228, 188);
-        border: 4px solid white;
-        margin-bottom: 10px;
-        padding: 10px;
-        text-align: center;
-        width: 200px;   
-    }
-
-    .tipo{
-        display: flex;
-        gap: 10px; 
-        flex-wrap: wrap; /*Se usa para acomodar a medida que se llenen los espacios el objeto quedara abajo*/
-        justify-content: center; /*El contenido se centra al medio*/
-    }
-
-    .espacio-imagen{
-        width: 100%; /*Anchura del espacio*/
-        height: 150px; /*Altura del espacio*/
-        overflow: hidden; /* Corta cualquier exceso */
-        border-radius: 4px; 
-    }
-
-
-    /*Regla para ID Ofrecemos*/
-    /* Limpia el formato por defecto de la lista */
-    #Ofrecemos ul.ofrecemos-contenedor {
-        list-style: none;
-        display: flex;                /* Ubica los elementos uno al lado del otro */
-        gap: 30px;                   /* Separación entre cada tarjeta */
-        justify-content: center;     /* Centra las tarjetas en el bloque */
-    }
-
-    /* Estilo para cada elemento individual (columna) */
-    .ofrecemos-item {
-        max-width: 300px;            /* LÍMITE DE ANCHO: evita que el texto se vaya a los lados */
-        background-color: white;
-        padding: 15px;
-        box-shadow: 0 2px 5px grey;
-        text-align: center;
-        box-sizing: border-box;
-    }
-
-    /* Estilo del título dentro de cada tarjeta */
-    .ofrecemos-item h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        font-size: 24px;
         color: #04AA6D;
     }
 
-    /* Estilo del párrafo */
-    .ofrecemos-item p {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    /* --- Estilos Best Sellers (Diseño de la imagen) --- */
-
-    #Popular p{
-        font-size: 20px;
-        line-height: 1.5;
-    }
-    
-    .bestsellers-grid {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 25px;
-    }
-
-    .tarjeta-bestseller {
-        width: 220px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .espacio-imagen-bestseller {
-        width: 100%;
-        height: 220px;
-        border-radius: 12px;
-        background-color: white;  
-    }
-
-    .espacio-imagen-bestseller img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .bestseller-titulo {
-        font-size: 17px;
-        font-weight: bold;
-        color: rgb(87, 87, 87);
-        margin: 8px;
-    }
-
-    .bestseller-precio {
-        font-weight: bold;
-        color: black;
-        margin: 4px;
-    }
-
-    /* Botón VER TODOS estilo cápsula oscura */
-    .ver-todos-container {
-        margin-top: 15px;
-        text-align: center;
-    }
-
-    .btn-ver-todos {
-        display: inline-block;
-        background-color: rgba(81, 136, 17, 0.829);
-        color: white;
-        padding: 12px 46px;
-        border-radius: 25px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
-        letter-spacing: 1px;
-        transition: background-color 0.3s ease;
-    }
-
-    .btn-ver-todos:hover {
-        background-color: #04AA6D;
-        color: #ffffff;
-    }
-
-    /*Calculadora*/
-
-    #calculadora {
-        text-align: center;
-        max-width: 320px;
-        margin: 0 auto; 
-    }
-
-    #pantalla {
-        width: 250px;
-        font-size: 35px;
-        text-align: right;
-        padding: 10px;
-        margin-bottom: 15px;
-    }
-
-    /*Registro*/
-    #registro {
-        font-size: 18px;
-        border-radius: 28px;
-        border: 3px solid #73AD21;
-        padding: 15px;
-    }
-
-    #registro legend {
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .submit {
-        background-color: #4CAF50; /* Verde */
-        border: none;
-        color: white;
-        padding: 10px 50px;
-        font-size: 18px;
-        margin: 4px 2px;
-        border-radius: 12px;
-    }
-
-    .form {
-        width: 95%;
-        padding: 8px 10px;
-        margin: 5px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    .producto {
-        width: 95%;
-        padding: 8px 10px;
-        margin: 5px;
-        background-color: #f8f8f8;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-    }
-
-    .cantidad {
-        padding: 8px 10px;
-        margin: 5px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    .pago {
-        margin: 5px;
-        transform: scale(1.2);
-    }
-
-    /* Achica y centra el formulario */
-    #inicio {
-        font-size: 16px;
-        border-radius: 20px;
-        border: 3px solid #73AD21;
-        padding: 25px;
-        max-width: 480px;          
-        margin: auto;
-        background-color: white;
-    }
-
-    #inicio fieldset {
-        border: none;
-        padding: 0;
-        display: flex;
-        flex-direction: column;      /* Centra elementos secundarios */
-    }
-
-    #inicio legend {
-        font-size: 22px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-
-    /* Ícono centrado y con tamaño simple */
-    .user-brand {
-        width: 120px;
-        height: 120px;
-        background-color: #e8f5e9;
-        border: 3px solid #73AD21;
-        border-radius: 50%;       /* Hace que el contenedor sea circular */
-        display: flex;
-        justify-content: center;  /* Centra el ícono horizontalmente */
-        align-items: center;      /* Centra el ícono verticalmente */
-        margin: 0 auto 20px auto;
-    }
-
-    /* Tamaño y color del ícono dentro del círculo */
-    .user-brand i {
-        font-size: 80px;         /* Ajusta el tamaño del logo */
-        color: rgb(10, 136, 130); /* Color del ícono */
-    }
-    
-
-    /* Ambos inputs con exactamente el mismo tamaño */
-    .ini {
-        width: 100%;
-        padding: 10px 12px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        box-sizing: border-box;   /* Garantiza ancho uniforme */
-    }
-
-    /* Botón de envío */
-    .btn-inicio {
-        width: 100%;
-        background-color: #4CAF50;
-        border: none;
-        color: white;
-        padding: 12px;
-        font-size: 17px;
-        margin-top: 10px;
-        border-radius: 8px;
-        transition: background-color 0.3s ease;
-    }
-
-    .btn-inicio:hover {
-        background-color: #04AA6D;
-    }
-
-    /* Texto y link inferior de registro */
-    .texto-registro {
-        margin-top: 20px;
-        font-size: 14px;
-        color: #555;
-        text-align: center;
-    }
-
-    .texto-registro a {
+    h3{
+        font-weight: 600;
         color: #04AA6D;
-        text-decoration: none;
-        font-weight: bold;
     }
 
-    .texto-registro a:hover {
-        text-decoration: underline;
-    }
-
-   /* Alinea el checkbox a la izquierda con margen simple */
-    .mostrar-pass {
-        display: flex;
-        align-items: center;
-        margin-top: -12px;
-        margin-bottom: 10px;
-        font-size: 14px;
+    .carrito-contador{
+        float: right;
+        color: white;
+        padding: 14px 16px;
+        font-size: 15px;
     }

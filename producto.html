@@ -3,16 +3,21 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Producto - Nutrivida</title>
+		<title>Producto</title>
         <link rel="stylesheet" href="CSS/style.css">
-        <link rel="stylesheet" href="CSS/productos.css">
+        <link rel="stylesheet" href="CSS/productos_style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
 
 		<header id="encabezado">
-			<h1>Nutrivida</h1>
-			<p>Una tienda de productos naturales para una vida saludable</p>
+			<div class="header-brand">
+				<!-- Ícono que funciona como logotipo arriba de Nutrivida -->
+				<i class="fa fa-leaf logo-icono" aria-hidden="true"></i>
+				<h1>Nutrivida</h1>
+			</div>
+			<!-- Eslogan alineado hacia la derecha -->
+			<p class="eslogan">Planea Saludable Para Una Vida Memorable</p>
 		</header>
 
 		<nav class="topnav">
@@ -25,7 +30,7 @@
 
 		<main id="contenido">
 
-			<p class="migas"><a href="index.html">Inicio</a> &gt; <a href="productos.html">Productos</a> &gt; <span id="categoria-producto"></span></p>
+			<p class="migas"> <span id="categoria-producto"	></span></p>
 
 			<section class="seccion producto-detalle">
 
@@ -57,6 +62,11 @@
 		</main>
 
 		<footer id="pie">
+			<div class="pie-logo">
+				<h1>Nutrivida</h1>
+				<i class="fa fa-leaf logo-icono" aria-hidden="true"></i>
+			</div>
+			<p><small>BY NUTRIVIDA CLINICA</small></p>
 			<p><small>&copy; 2026 NutriVida - Todos los derechos reservados</small></p>
 		</footer>
 

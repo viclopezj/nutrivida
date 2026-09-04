@@ -1,9 +1,4 @@
-:root {
-    --verde-oscuro: #145c43;
-    --verde-oscuro-hover: #1d7a58;
-    --verde-suave: #eaf5ef;
-    --crema: #faf8f3;
-}
+/* Estilos de los servicios nutricionales ofrecidos */
 
 #planes-intro h2,
 .plan-info h3,
@@ -37,7 +32,7 @@
 
 .plan-tarjeta {
     display: flex;
-    background-color: var(--crema);
+    background-color: #f9f9f9;
     border: 1px solid #e7e2d8;
     border-radius: 14px;
     overflow: hidden;
@@ -69,7 +64,7 @@
 
 .plan-categoria {
     display: inline-block;
-    background-color: var(--verde-oscuro);
+    background-color: darkgreen;
     color: white;
     font-size: 13px;
     font-weight: 600;
@@ -83,7 +78,7 @@
     margin: 4px 0 10px 0;
     font-size: 23px;
     font-weight: 600;
-    color: var(--verde-oscuro);
+    color: darkgreen;
 }
 
 .plan-descripcion {
@@ -110,8 +105,8 @@
     gap: 2px;
     min-width: 110px;
     background-color: #ffffff;
-    border: 2px solid var(--verde-oscuro);
-    color: var(--verde-oscuro);
+    border: 2px solid darkgreen;
+    color: darkgreen;
     border-radius: 30px;
     padding: 10px 22px;
     font-size: 14px;
@@ -119,7 +114,7 @@
     cursor: pointer;
     text-align: center;
     transition: background-color 0.25s ease, color 0.25s ease,
-        transform 0.2s ease, box-shadow 0.25s ease;
+    transform 0.2s ease, box-shadow 0.25s ease;
 }
 
 /* Oculta el checkbox nativo pero lo mantiene accesible */
@@ -138,29 +133,29 @@
 .comida-opcion .comida-precio {
     font-size: 12px;
     font-weight: 700;
-    color: var(--verde-oscuro);
+    color: darkgreen;
     transition: color 0.25s ease;
 }
 
 /* Hover: cambia de color y se eleva levemente */
 .comida-opcion:hover {
-    background-color: var(--verde-suave);
+    background-color: #e6f2e6;
     transform: translateY(-3px);
     box-shadow: 0 6px 14px rgba(20, 92, 67, 0.18);
 }
 
 /* Seleccionada: pastilla sólida verde oscuro con animación de aparición */
 .comida-opcion.seleccionada {
-    background-color: var(--verde-oscuro);
-    border-color: var(--verde-oscuro);
+    background-color: darkgreen;
+    border-color: darkgreen;
     color: #ffffff;
     box-shadow: 0 6px 16px rgba(20, 92, 67, 0.32);
     animation: pop-seleccion 0.32s ease;
 }
 
 .comida-opcion.seleccionada:hover {
-    background-color: var(--verde-oscuro-hover);
-    border-color: var(--verde-oscuro-hover);
+    background-color: darkgreen;
+    border-color: darkgreen;
     transform: translateY(-3px) scale(1.03);
 }
 
@@ -196,7 +191,7 @@
     border-radius: 20px;
     border: 1px solid #d5d0c4;
     background-color: white;
-    color: var(--verde-oscuro);
+    color: darkgreen;
     font-weight: 600;
     font-size: 15px;
     cursor: pointer;
@@ -205,7 +200,7 @@
 
 .plan-duracion:hover,
 .plan-duracion:focus {
-    border-color: var(--verde-oscuro);
+    border-color: darkgreen;
     outline: none;
 }
 
@@ -225,14 +220,14 @@
 
 .plan-total-valor {
     font-weight: 700;
-    color: var(--verde-oscuro);
+    color: darkgreen;
     margin-left: 6px;
     font-size: 26px;
 }
 
 .plan-tarjeta .btn-agregar-plan {
     padding: 11px 26px;
-    background-color: var(--verde-oscuro);
+    background-color: darkgreen;
     border-radius: 24px;
     font-weight: 600;
     letter-spacing: 0.2px;
@@ -240,7 +235,7 @@
 }
 
 .plan-tarjeta .btn-agregar-plan:hover {
-    background-color: var(--verde-oscuro-hover);
+    background-color: darkgreen;
     transform: translateY(-2px);
 }
 

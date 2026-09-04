@@ -1,0 +1,101 @@
+/* Achica y centra el formulario */
+    #inicio {
+        font-size: 15px;
+        border-radius: 20px;
+        border: 2px solid #73AD21;
+        padding: 30px;
+        max-width: 440px;          
+        margin: 40px auto;
+    }
+
+    #inicio fieldset {
+        border: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;      /* Centra elementos secundarios */
+        padding-top: 40px;
+    }
+
+    #inicio legend {
+        font-size: 22px;
+        font-weight: bold;
+        display: flex; /*Convierte a contenedor flexible*/
+        justify-content: center; /* Centra el texto horizontalmente */
+        width: 100%; /*Forza a ocupar todo el ancho posible*/
+    }
+
+    /* Ícono centrado y con tamaño simple */
+    .user-brand {
+        width: 120px;
+        height: 120px;
+        background-color: #e8f5e9;
+        border: 3px solid #73AD21;
+        border-radius: 50%;       /* Hace que el contenedor sea circular */
+        display: flex;
+        justify-content: center;  /* Centra el ícono horizontalmente */
+        align-items: center;      /* Centra el ícono verticalmente */
+        margin: 0 auto 20px auto;
+    }
+
+    /* Tamaño y color del ícono dentro del círculo */
+    .user-brand i {
+        font-size: 80px;         /* Ajusta el tamaño del logo */
+        color: rgb(10, 136, 130); /* Color del ícono */
+    }
+    
+
+    /* Ambos inputs con exactamente el mismo tamaño */
+    .ini {
+        width: 100%;
+        padding: 11px 14px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;   /* Garantiza ancho uniforme */
+    }
+
+    /* Botón de envío */
+    .btn-inicio {
+        width: 100%;
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 12px;
+        font-size: 17px;
+        margin-top: 16px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-inicio:hover {
+        background-color: #04AA6D;
+    }
+
+    /* Texto y link inferior de registro */
+    .texto-registro {
+        margin-top: 18px;
+        font-size: 14px;
+        color: #555;
+        text-align: center;
+    }
+
+    .texto-registro a {
+        color: #04AA6D;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .texto-registro a:hover {
+        text-decoration: underline;
+    }
+
+   /* Alinea el checkbox a la izquierda con margen simple */
+    .mostrar-pass {
+        display: flex;
+        align-items: center;
+        margin-top: 2px;
+        margin-bottom: 6px;
+        font-size: 14px;
+        gap: 6px;
+    }

@@ -7,12 +7,20 @@ function renderizarProductos(){
 		tarjeta.className = "producto-tarjeta";
 		tarjeta.innerHTML = `
 			<a href="producto.html?id=${p.id}" class="producto-link">
-				<img src="${p.imagenes[0]}" alt="${p.nombre}">
-				<h3>${p.nombre}</h3>
+				<div class="producto-imagen">
+					<img src="${p.imagenes[0]}" alt="${p.nombre}">
+				</div>
+				<div class="producto-info">
+					<span class="producto-categoria">${p.categoria}</span>
+					<h3>${p.nombre}</h3>
+					<p class="producto-descripcion">${p.descripcion}</p>
+				</div>
 			</a>
-			<p class="producto-precio">${formatoPrecio(p.precio)}</p>
-			<button class="btn-agregar" data-id="${p.id}">Añadir</button>
-		`;
+			<div class="producto-pie">
+				<p class="producto-precio">${formatoPrecio(p.precio)}</p>
+				<button class="btn-agregar" data-id="${p.id}">Añadir</button>
+			</div>
+			`;
 		grid.appendChild(tarjeta);
 	});
 

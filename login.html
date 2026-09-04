@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Inicio de Sesion</title>
-        <link rel="stylesheet" href="CSS/style.css">
+		<link rel="stylesheet" href="CSS/style.css">
+		<link rel="stylesheet" href="CSS/login_style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
+
 	<body>
-        <header id="encabezado">
-			<h1>Nutrivida</h1>
-			<p>Una tienda de herramientas para mineria con HTML5 y CSS</p>
+		<header id="encabezado">
+			<div class="header-brand">
+				<!-- Ícono que funciona como logotipo arriba de Nutrivida -->
+				<i class="fa fa-leaf logo-icono" aria-hidden="true"></i>
+				<h1>Nutrivida</h1>
+			</div>
+			<!-- Eslogan alineado hacia la derecha -->
+			<p class="eslogan">Planea Saludable Para Una Vida Memorable</p>
 		</header>
 
 		<nav class="topnav">
@@ -18,45 +25,58 @@
 			<a href="productos.html"><i class="fa fa-fw fa-shopping-cart"></i> Catálogo de Compras</a>
 			<a href="servicios.html"><i class="fa fa-fw fa-cutlery"></i> Planes</a>
 			<a href="login.html" class="split"><i class="fa fa-fw fa-user"></i> Iniciar Sesion</a>
+			<span class="carrito-contador"><i class="fa fa-fw fa-shopping-basket"></i> Carrito (<span id="carrito-num">0</span>)</span>
 		</nav>
-		
-		<main id ="contenido">
-        <form id ="inicio">
-            <fieldset> <!-- fieldset para agrupar en formulario-->
-                <legend>Iniciar Sesion</legend>
-
-			<div class="user-brand">
-    			<i class="fa fa-user user-icono" aria-hidden="true"></i>
-    		</div>
-
-			<br></br>
-				<label>Correo Electronico: </label>
-				<input class="ini" type="email"
-					name=="correo"
-					id="correo"
-					placeholder="usuario@gmail.com"
-					required>
 			
-			<br></br>
-				<label>Contraseña: </label>
-				<input class="ini" type="password"
-					name=="contrasenia"
-					id="contrasenia"
-					required>
-			<br></br>
+		<main id ="contenido">
+			<form id ="inicio">
+				<fieldset> <!-- fieldset para agrupar en formulario-->
+					<legend>Iniciar Sesion</legend>
 
-			<label class="mostrar-pass">
-                <input type="checkbox" onclick="mostrar()"> Mostrar Contraseña
-            </label>	
+					<div class="user-brand">
+						<i class="fa fa-user user-icono" aria-hidden="true"></i>
+					</div>
 
-			<button class="btn-inicio" type="submit">Iniciar Sesion</button>
+					<br></br>
+					
+					<label>Correo Electronico: </label>
+					<input class="ini" type="email"
+						name=="correo"
+						id="correo"
+						placeholder="usuario@gmail.com"
+						required>
+					
+					<br></br>
+					
+					<label>Contraseña: </label>
+					<input class="ini" type="password"
+						name=="contrasenia"
+						id="contrasenia"
+						required>
+					
+					<br></br>
 
-			<p class="texto-registro">
-                ¿No tiene cuenta? <a href="registro.html">Regístrese ahora</a>
-            </p>
+					<label class="mostrar-pass">
+						<input type="checkbox" onclick="mostrar()"> Mostrar Contraseña
+					</label>	
 
-			</fieldset>
-        </form>
-    <script src="JS/validainicio.js"></script>
-</body>
+					<button class="btn-inicio" type="submit">Iniciar Sesion</button>
+
+					<p class="texto-registro">
+						¿No tiene cuenta? <a href="registro.html">Regístrese ahora</a>
+					</p>
+
+				</fieldset>	
+			</form>	
+		</main>
+		<footer id="pie">
+			<div class="pie-logo">
+				<h1>Nutrivida</h1>
+				<i class="fa fa-leaf logo-icono" aria-hidden="true"></i>
+			</div>
+			<p><small>BY NUTRIVIDA CLINICA</small></p>
+			<p><small>&copy; 2026 NutriVida - Todos los derechos reservados</small></p>
+		</footer>
+		<script src="JS/validainicio.js"></script>
+	</body>
 </html>

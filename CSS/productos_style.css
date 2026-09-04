@@ -1,0 +1,244 @@
+/* Estilos del Catálogo de Compras y detalle de producto */
+.productos-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 15px;
+}
+
+.producto-tarjeta{
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfaf5;
+    border: 1px solid #e7e2d8;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(20, 92, 67, 0.08);
+    transition: box-shadow 0.25s ease, transform 0.2s ease;
+    text-align: left;
+}
+
+.producto-tarjeta:hover{
+    box-shadow: 0 6px 20px rgba(20, 92, 67, 0.14);
+    transform: translateY(-2px);
+}
+
+.producto-link{
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    gap: 16px;
+    padding: 16px 16px 0 16px;  
+}
+
+.producto-imagen{
+    flex: 0 0 130px;
+}
+
+.producto-tarjeta img{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.producto-info{
+    flex: 1;
+    min-width: 0;
+}
+
+.producto-precio{
+    font-weight: 700;
+    color: darkgreen;
+    font-size: 19px;
+}
+
+.producto-categoria{
+    display: inline-block;
+    background-color: darkgreen;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-family: 'Poppins', 'Franklin Gothic Medium', Arial, sans-serif;
+}
+
+.producto-descripcion{
+    font-size: 13px;
+    line-height: 1.5;
+    color: #6b6b6b;
+    margin: 0;
+    overflow: hidden;
+}
+
+.producto-pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px 16px 16px;
+    margin-top: 10px;
+}   
+
+.btn-agregar{
+    background-color: #24c148;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.btn-agregar:hover{
+    background-color: #1a7d33;
+}
+
+
+/* ===== Detalle de producto ===== */
+
+.migas{
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    padding: 0 15px;
+    font-size: 14px;
+    color: var(--texto-secundario, #6b6b6b);
+}
+.migas a{
+    color: var(--verde-oscuro);
+    text-decoration: none;
+    font-weight: 600;
+}
+.migas a:hover{
+    text-decoration: underline;
+}
+
+.producto-detalle{
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+}
+
+.galeria-producto{
+    flex: 1 1 400px;
+}
+
+#imagen-principal{
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #e7e2d8;
+    box-shadow: 0 3px 10px rgba(20, 92, 67, 0.08);
+}
+
+.miniaturas{
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.miniaturas img{
+    width: 80px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 1px 4px rgba(20, 92, 67, 0.15);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.miniaturas img.activa{
+    border-color: var(--verde-oscuro);
+}
+
+.info-producto{
+    flex: 1 1 300px;
+}
+
+.info-producto h2{
+    margin-top: 0;
+}
+
+.producto-detalle .producto-precio{
+    font-size: 28px;
+    display: block;
+    margin: 10px 0 14px 0;
+}
+
+#descripcion-producto{
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--texto-secundario, #6b6b6b);
+    margin-bottom: 18px;
+}
+
+.info-producto label{
+    font-weight: 600;
+    color: #444;
+    margin-right: 8px;
+}
+
+.mensaje-agregado{
+    color: var(--verde-oscuro);
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.relacionados-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
+}
+
+.relacionado-tarjeta{
+    background-color: var(--crema);
+    border: 1px solid #e7e2d8;
+    border-radius: 14px;
+    padding: 12px;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    transition: box-shadow 0.25s ease, transform 0.2s ease;
+    display: block;
+    box-shadow: 0 3px 10px rgba(20, 92, 67, 0.06);
+}
+.relacionado-tarjeta:hover{
+    box-shadow: 0 6px 18px rgba(20, 92, 67, 0.14);
+    transform: translateY(-3px);
+}
+
+.relacionado-tarjeta img{
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.relacionado-tarjeta h4{
+    margin: 10px 0 4px 0;
+    font-size: 14px;
+    color: var(--verde-oscuro);
+    font-family: 'Poppins', 'Franklin Gothic Medium', Arial, sans-serif;
+}
+
+.relacionado-tarjeta p{
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+}
+
+@media (max-width: 700px){
+    .producto-detalle{
+        flex-direction: column;
+    }
+}
