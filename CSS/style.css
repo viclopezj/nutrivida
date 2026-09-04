@@ -1,8 +1,34 @@
+    :root{
+        --verde-oscuro: #145c43;
+        --verde-oscuro-hover: #1d7a58;
+        --verde-suave: #eaf5ef;
+        --crema: #faf8f3;
+        --borde-suave: #e7e2d8;
+        --texto-secundario: #5c5c5c;
+    }
+
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: 'Nunito Sans', 'Segoe UI', Arial, sans-serif;
+        background-color: #ffffff;
+        padding: 0;
+        margin: 0;
+        color: #333;
+    }
+
+    h1, h2, h3, h4,
+    legend, .header-brand, .pie-logo{
+        font-family: 'Poppins', 'Franklin Gothic Medium', Arial, sans-serif;
+    }
+
     /*Style*/
     #encabezado{
         background-color: #04AA6D;
         color: white;
-        padding: 25px 50px;
+        padding: 22px 50px;
         display: flex;
         justify-content: space-between; /* Empuja el eslogan a la derecha y la marca a la izquierda */
         align-items: center;
@@ -29,12 +55,15 @@
 
     /* Estilo del título principal */
     #encabezado h1 {
-        font-size: 40px;
+        font-size: 32px;
+        font-weight: 700;
         margin: 0;
+        letter-spacing: 0.3px;
     }
 
     /* Estilo del eslogan alineado a la derecha */
-    #encabezado .eslogan {
+    #encabezado .eslogan,
+    #encabezado p {
         margin: 0;
         font-size: 20px;
         font-style: italic;
@@ -61,6 +90,7 @@
         background-color: #04AA6D;
         text-align: center;
         padding: 34px 20px;
+        padding: 34px 20px;
         color: white;
         display: flex;
         flex-direction: column;
@@ -70,12 +100,15 @@
 
     #pie h1{
         margin: 0;
+        font-size: 26px;
+        font-weight: 700;
     }
 
     .pie-logo {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 10px;
     }
 
     .footer-logo h1 {
@@ -89,49 +122,74 @@
 
     .button{
         width: 60px;
-        height: 65px; 
-        font-size: 24px; 
+        height: 60px;
+        font-size: 20px;
+        font-weight: 600;
         background-color: white;
-        border: 2px solid #ccc;
+        border: 1px solid var(--borde-suave);
+        border-radius: 10px;
+        color: var(--verde-oscuro);
         transition: 0.2s;
     }
 
-    /* Add a black background color to the top navigation */
+    .button:hover{
+        background-color: var(--verde-suave);
+        border-color: var(--verde-oscuro);
+    }
+
+    /* Barra de navegación superior: limpia, clara y minimalista */
     .topnav {
-        position: sticky;  
+        position: sticky;
         top: 0;
         overflow: hidden;
-        background-color: #333;
+        background-color: #ffffff;
+        border-bottom: 1px solid var(--borde-suave);
         z-index: 1000;
     }
 
-    /* Style the links inside the navigation bar */
+    /* Estilo de los enlaces dentro de la barra de navegación */
     .topnav a {
         float: left;
-        color: #f2f2f2;
+        color: var(--verde-oscuro);
         text-align: center;
-        padding: 14px 16px;
+        padding: 16px 18px;
         text-decoration: none;
-        font-size: 17px;
+        font-size: 15px;
+        font-weight: 600;
+        transition: background-color 0.2s ease, color 0.2s ease;
     }
 
-    /* Add a color to the active/current link */
+    /* Color del enlace activo/actual */
     .topnav a.active {
-        background-color: #04AA6D;
+        background-color: var(--verde-oscuro);
         color: white;
     }
 
-    /* Create a right-aligned (split) link inside the navigation bar */
+    /* Enlace alineado a la derecha (split) dentro de la barra de navegación */
     .topnav a.split {
         float: right;
-        background-color: #04AA6D;
+        background-color: transparent;
+        color: var(--verde-oscuro);
+        border-left: 1px solid var(--borde-suave);
+    }
+
+    /* Color de los enlaces al pasar el cursor */
+    .topnav a:hover {
+        background-color: var(--verde-suave);
+        color: var(--verde-oscuro);
+    }
+
+    .topnav a.active:hover{
+        background-color: var(--verde-oscuro-hover);
         color: white;
     }
 
-    /* Change the color of links on hover */
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
+    .carrito-contador{
+        float: right;
+        color: var(--verde-oscuro);
+        padding: 16px 18px;
+        font-size: 14px;
+        font-weight: 600;
     }
 
     /*Reglas para las etiquetas h2 y h3*/

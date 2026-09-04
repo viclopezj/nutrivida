@@ -15,6 +15,14 @@ function renderizarProductos(){
 					<h3>${p.nombre}</h3>
 					<p class="producto-descripcion">${p.descripcion}</p>
 				</div>
+				<div class="producto-imagen">
+					<img src="${p.imagenes[0]}" alt="${p.nombre}">
+				</div>
+				<div class="producto-info">
+					<span class="producto-categoria">${p.categoria}</span>
+					<h3>${p.nombre}</h3>
+					<p class="producto-descripcion">${p.descripcion}</p>
+				</div>
 			</a>
 			<div class="producto-pie">
 				<p class="producto-precio">${formatoPrecio(p.precio)}</p>
