@@ -1,89 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Registro de Usuario</title>
-		<link rel="stylesheet" href="CSS/style.css">
-		<link rel="stylesheet" href="CSS/registro_style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro de Usuario</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/registro_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
 
     <body>
         <header id="encabezado">
             <div class="header-brand">
-                <!-- Ícono que funciona como logotipo arriba de Nutrivida -->
                 <i class="fa fa-leaf logo-icono" aria-hidden="true"></i>
                 <h1>Nutrivida</h1>
             </div>
-            <!-- Eslogan alineado hacia la derecha -->
             <p class="eslogan">Planea Saludable Para Una Vida Memorable</p>
-		</header>
+        </header>
 
         <nav class="topnav">
-			<a href="index.html"><i class="fa fa-fw fa-home"></i> Inicio</a> 
-			<a href="productos.html"><i class="fa fa-fw fa-shopping-cart"></i> Catálogo de Compras</a>
-			<a href="servicios.html"><i class="fa fa-fw fa-cutlery"></i> Planes</a>
-			<a href="login.html" class="split"><i class="fa fa-fw fa-user"></i> Iniciar Sesion</a>
-			<span class="carrito-contador"><i class="fa fa-fw fa-shopping-basket"></i> Carrito (<span id="carrito-num">0</span>)</span>
-		</nav>
+            <a href="index.html"><i class="fa fa-fw fa-home"></i> Inicio</a> 
+            <a href="productos.html"><i class="fa fa-fw fa-shopping-cart"></i> Catálogo de Compras</a>
+			<a href="agendar.html"><i class="fa fa-fw fa-calendar"></i> Agendar Cita</a>
+            <a href="login.html" class="split"><i class="fa fa-fw fa-user"></i> Iniciar Sesión</a>
+            <span class="carrito-contador"><i class="fa fa-fw fa-shopping-basket"></i> Carrito (<span id="carrito-num">0</span>)</span>
+        </nav>
 
-
-        <main id ="contenido">
-            <form id ="registro">
-                <fieldset> <!-- fieldset para agrupar en formulario-->
+        <main id="contenido">
+            <form id="registro">
+                <fieldset>
                     <legend>Formulario de Registro</legend>
 
-                    <label>Nombre: </label> <!-- Label para definir titulo o elemento-->
-                    <input class="form" type="text"
-                        name="nombre"
-                        id="nombre"
-                        placeholder="Ingrese su nombre" 
-                        required>
-                        <!-- placehoder: Un texto que sirve como guia
-                            required: Hace necesario escribir algo -->
-            
-                    <br></br>
-                    <label>Rut: </label>
-                    <input class="form" type="text"
-                        name="rut"
-                        id="rut"
-                        placeholder="Formato 22123456-7"
-                        required>
+                    <label for="nombre">Nombre:</label>
+                    <input class="form" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
 
-                    <br></br>
-                    <label>Correo Electronico: </label>
-                    <input class="form" type="email"
-                        name=="correo"
-                        id="correo"
-                        placeholder="usuario@gmail.com"
-                        required>
+                    <label for="rut">Rut:</label>
+                    <input class="form" type="text" name="rut" id="rut" placeholder="Formato 12.345.678-k" required>
 
-                    <br></br>
-                    <label>Telefono: </label>
-                    <input class="form" type="tel"
-                        name=="telefono"
-                        id="telefono"
-                        value="+56">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input class="form" type="email" name="correo" id="correo" placeholder="usuario@gmail.com" required>
 
-                    <br></br>
-                    <label>Fecha de Nacimiento: </label>
-                    <input class="form" type="date"
-                        name=="fenac"
-                        id="fenac"
-                        required>
+                    <label for="telefono">Teléfono:</label>
+                    <input class="form" type="tel" name="telefono" id="telefono" value="+56">
 
-                    <label>Contraseña: </label>
-					<input class="form" type="password"
-						name=="contrasenia"
-						id="contrasenia"
-						required>
-					
-					<br></br>
+                    <label for="fenac">Fecha de Nacimiento:</label>
+                    <input class="form" type="date" name="fenac" id="fenac" required>
 
-					<label class="mostrar-pass">
-						<input type="checkbox" onclick="mostrar()"> Mostrar Contraseña
-					</label>
+                    <label for="contrasenia">Contraseña:</label>
+                    <input class="form" type="password" name="contrasenia" id="contrasenia" required>
+
+                    <label class="mostrar-pass">
+                        <input type="checkbox" onclick="mostrar()"> Mostrar Contraseña
+                    </label>
                     
                     <div id="message">
                         <h3>La contraseña debe contener lo siguiente:</h3>
@@ -93,24 +61,24 @@
                         <p id="length" class="invalid">Mínimo <b>8 caracteres</b></p>
                     </div>
 
-                    <br></br>
                     <button class="submit" type="submit">ENVIAR</button>
 
                     <p class="texto-inicio">
-						¿Ya esta registrado(a)? <a href="login.html">Solo inicie sesion</a>
-					</p>
-
+                        ¿Ya está registrado(a)? <a href="login.html">Solo inicie sesión</a>
+                    </p>
                 </fieldset>
             </form>
         </main>
+
         <footer id="pie">
-			<div class="pie-logo">
-				<h1>Nutrivida</h1>
-				<i class="fa fa-leaf logo-icono" aria-hidden="true"></i>
-			</div>
-			<p><small>BY NUTRIVIDA CLINICA</small></p>
-			<p><small>&copy; 2026 NutriVida - Todos los derechos reservados</small></p>
-		</footer>
+            <div class="pie-logo">
+                <h1>Nutrivida</h1>
+                <i class="fa fa-leaf logo-icono" aria-hidden="true"></i>
+            </div>
+            <p><small>BY NUTRIVIDA CLINICA</small></p>
+            <p><small>&copy; 2026 NutriVida - Todos los derechos reservados</small></p>
+        </footer>
+
         <script src="JS/validaform.js"></script>
     </body>
 </html>

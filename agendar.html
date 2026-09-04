@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Agendar Cita - Nutrivida</title>
+		<link rel="stylesheet" href="CSS/style.css">
+		<link rel="stylesheet" href="CSS/agendar_style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+
+		<header id="encabezado">
+			<div class="header-brand">
+				<i class="fa fa-leaf logo-icono" aria-hidden="true"></i>
+				<h1>Nutrivida</h1>
+			</div>
+			<p class="eslogan">Planea Saludable Para Una Vida Memorable</p>
+		</header>
+
+		<nav class="topnav">
+			<a href="index.html"><i class="fa fa-fw fa-home"></i> Inicio</a>
+			<a href="productos.html"><i class="fa fa-fw fa-shopping-cart"></i> Catálogo de Compras</a>
+			<a class="active" href="agendar.html"><i class="fa fa-fw fa-calendar"></i> Agendar Cita</a>
+			<a href="login.html" class="split"><i class="fa fa-fw fa-user"></i> Iniciar Sesion</a>
+			<span class="carrito-contador"><i class="fa fa-fw fa-shopping-basket"></i> Carrito (<span id="carrito-num">0</span>)</span>
+		</nav>
+
+
+		<!-- PASOS que al seleccionar avanza -->
+		<main id="contenido">
+
+			<section id="agendar-intro" class="seccion">
+				<h2>Reserva tu Cita Nutricional</h2>
+				<p>Agenda en pocos pasos una hora con el especialista más adecuado para tu objetivo. Elige a tu nutricionista, escoge el día y horario que más te acomode, y confirma tus datos.</p>
+			</section>
+
+			<section class="seccion">
+
+				<!-- Indicador de pasos -->
+				<div class="pasos-indicador">
+					<div class="paso-indicador activo" data-paso="1"><span class="paso-numero">1</span> Nutricionista</div>
+					<div class="paso-indicador" data-paso="2"><span class="paso-numero">2</span> Fecha y Hora</div>
+					<div class="paso-indicador" data-paso="3"><span class="paso-numero">3</span> Confirmación</div>
+				</div>
+
+				<!-- PASO 1: SELECCIÓN DE NUTRICIONISTA -->
+				<div id="panel-paso-1" class="paso-panel activo">
+					<h3 class="paso-titulo">Elige a tu nutricionista</h3>
+					<p class="paso-nota">Cada especialista atiende un área distinta de la nutrición. Selecciona una tarjeta para continuar.</p>
+
+					<div class="nutri-lista" id="lista-nutricionistas"></div>
+
+					<div class="paso-botones" style="justify-content: flex-end;">
+						<button type="button" id="btn-paso1-siguiente" class="btn-siguiente" disabled>Siguiente</button>
+					</div>
+				</div>
+
+				<!-- PASO 2: FECHA Y HORA -->
+				<div id="panel-paso-2" class="paso-panel">
+					<h3 class="paso-titulo">Elige fecha y horario</h3>
+					<p class="paso-nota">La clínica no atiende los domingos. Los sábados la atención es solo en horario de mañana.</p>
+
+					<div class="paso2-layout">
+						<div class="calendario-columna">
+							<div class="calendario-cabecera">
+								<button type="button" id="btn-mes-anterior" class="btn-mes"><i class="fa fa-chevron-left"></i></button>
+								<h4 id="calendario-mes"></h4>
+								<button type="button" id="btn-mes-siguiente" class="btn-mes"><i class="fa fa-chevron-right"></i></button>
+							</div>
+							<div class="calendario-dias-semana">
+								<span>D</span><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span>
+							</div>
+							<div class="calendario-grid" id="calendario-grid"></div>
+						</div>
+
+						<div class="horarios-columna">
+							<h4>Horarios disponibles</h4>
+							<p id="texto-horarios">Selecciona primero un día en el calendario.</p>
+							<div class="horarios-grid" id="bloque-horarios"></div>
+						</div>
+					</div>
+
+					<div class="paso-botones">
+						<button type="button" id="btn-paso2-anterior" class="btn-anterior">Anterior</button>
+						<button type="button" id="btn-paso2-siguiente" class="btn-siguiente" disabled>Siguiente</button>
+					</div>
+				</div>
+
+				<!-- PASO 3: FORMULARIO Y CONFIRMACIÓN -->
+				<div id="panel-paso-3" class="paso-panel">
+					<h3 class="paso-titulo">Confirma tu cita</h3>
+					<p class="paso-nota">Completa tus datos para que el equipo de NutriVida pueda contactarte antes de tu cita.</p>
+
+					<form id="form-confirmacion" class="paso3-layout">
+						<div class="datos-columna">
+							<div class="campo-form">
+								<label for="campo-nombre">Nombre completo</label>
+								<input type="text" id="campo-nombre" required placeholder="Ej: Ana Pérez González">
+							</div>
+							<div class="campo-form">
+								<label for="campo-rut">Rut</label>
+								<input type="text" id="campo-rut" required placeholder="Ej: 12.345.678-9">
+							</div>
+							<div class="campo-form">
+								<label for="campo-telefono">Teléfono</label>
+								<input type="tel" id="campo-telefono" required placeholder="Ej: +56912345678">
+							</div>
+							<div class="campo-form">
+								<label for="campo-correo">Correo electrónico</label>
+								<input type="email" id="campo-correo" required placeholder="Ej: ana.perez@gmail.com">
+							</div>
+							<div class="campo-form">
+								<label for="campo-motivo">Motivo de consulta</label>
+								<textarea id="campo-motivo" rows="4" required placeholder="Cuéntanos brevemente qué te gustaría trabajar en tu cita"></textarea>
+							</div>
+
+							<button type="submit" class="btn-confirmar">Confirmar Cita</button>
+						</div>
+
+						<div class="resumen-caja">
+							<h4>Resumen de tu reserva</h4>
+							<div class="resumen-linea"><span>Nutricionista</span><span id="resumen-nutricionista">-</span></div>
+							<div class="resumen-linea"><span>Fecha</span><span id="resumen-fecha">-</span></div>
+							<div class="resumen-linea"><span>Hora</span><span id="resumen-hora">-</span></div>
+						</div>
+					</form>
+
+					<div id="mensaje-exito" class="mensaje-exito oculto">
+						<i class="fa fa-check-circle"></i>
+						<h3>¡Cita agendada con éxito!</h3>
+						<p>Gracias <span id="exito-nombre"></span>, hemos registrado tu hora. Te contactaremos para confirmar los detalles antes de tu cita.</p>
+						<button type="button" id="btn-nueva-cita" class="btn-nueva-cita">Agendar otra cita</button>
+					</div>
+
+					<div class="paso-botones">
+						<button type="button" id="btn-paso3-anterior" class="btn-anterior">Anterior</button>
+					</div>
+				</div>
+
+			</section>
+
+			<!-- Información adicional para que la sección no quede vacía -->
+			<section class="seccion">
+				<h2>¿Cómo funciona tu cita?</h2>
+				<div class="info-general">
+					<div class="info-item">
+						<i class="fa fa-clock-o"></i>
+						<h4>Duración</h4>
+						<p>Cada sesión dura aproximadamente 45 minutos e incluye evaluación y plan de seguimiento.</p>
+					</div>
+					<div class="info-item">
+						<i class="fa fa-map-marker"></i>
+						<h4>Atención</h4>
+						<p>Las citas son presenciales en nuestra clínica ubicada en Temuco, Región de La Araucanía.</p>
+					</div>
+					<div class="info-item">
+						<i class="fa fa-calendar-check-o"></i>
+						<h4>Horario de atención</h4>
+						<p>Lunes a viernes de 09:00 a 18:00 hrs. Sábados solo en la mañana. Domingos no hay atención.</p>
+					</div>
+					<div class="info-item">
+						<i class="fa fa-bell"></i>
+						<h4>Recordatorio</h4>
+						<p>Te contactaremos por teléfono para confirmar tu hora y resolver cualquier duda antes de tu cita.</p>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<footer id="pie">
+			<div class="pie-logo">
+				<h1>Nutrivida</h1>
+				<i class="fa fa-leaf logo-icono" aria-hidden="true"></i>
+			</div>
+			<p><small>BY NUTRIVIDA CLINICA</small></p>
+			<p><small>&copy; 2026 NutriVida - Todos los derechos reservados</small></p>
+		</footer>
+
+		<script src="JS/carrito.js"></script>
+		<script src="JS/agendar-data.js"></script>
+		<script src="JS/agendar.js"></script>
+	</body>
+</html>

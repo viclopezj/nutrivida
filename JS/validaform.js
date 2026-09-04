@@ -1,30 +1,26 @@
-// Declaración del formulario
-let formulario = document.getElementById("registro"); // Corregido ID a 'registro'
+let formulario = document.getElementById("registro");
 let nombre = document.getElementById("nombre");
 let rut = document.getElementById("rut");
 let correo = document.getElementById("correo");
 let telefono = document.getElementById("telefono");
 
-// Variables para la validación de contraseña
 var myInput = document.getElementById("contrasenia");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
 
-// Mostrar el cuadro de mensaje al enfocar el input de contraseña
+// Mostrar/Ocultar recuadro de requisitos de contraseña
 myInput.onfocus = function() {
     document.getElementById("message").style.display = "block";
 }
 
-// Ocultar el cuadro de mensaje al salir del input
 myInput.onblur = function() {
     document.getElementById("message").style.display = "none";
 }
 
-// Validación en tiempo real mientras el usuario escribe
+// Validación visual en tiempo real
 myInput.onkeyup = function() {
-    // Validar letras minúsculas
     var lowerCaseLetters = /[a-z]/g;
     if(myInput.value.match(lowerCaseLetters)) { 
         letter.classList.remove("invalid");
@@ -34,7 +30,6 @@ myInput.onkeyup = function() {
         letter.classList.add("invalid");
     }
 
-    // Validar letras mayúsculas
     var upperCaseLetters = /[A-Z]/g;
     if(myInput.value.match(upperCaseLetters)) { 
         capital.classList.remove("invalid");
@@ -44,7 +39,6 @@ myInput.onkeyup = function() {
         capital.classList.add("invalid");
     }
 
-    // Validar números
     var numbers = /[0-9]/g;
     if(myInput.value.match(numbers)) { 
         number.classList.remove("invalid");
@@ -54,7 +48,6 @@ myInput.onkeyup = function() {
         number.classList.add("invalid");
     }
 
-    // Validar longitud mínima
     if(myInput.value.length >= 8) {
         length.classList.remove("invalid");
         length.classList.add("valid");
@@ -64,10 +57,10 @@ myInput.onkeyup = function() {
     }
 }
 
-// Validación global del envío del formulario
+// Validación al enviar el formulario
 formulario.addEventListener("submit", function(event){
     if(!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(nombre.value)){
-        alert("El nombre debe contener solo letras");
+        alert("El nombre debe contener solo letras.");
         nombre.focus();
         event.preventDefault();
         return;
@@ -98,14 +91,22 @@ formulario.addEventListener("submit", function(event){
     let limite = new Date(new Date().setFullYear(new Date().getFullYear() - 18)).toISOString().split('T')[0];
 
     if (fenac.value > limite) {
-        alert("Debes tener 18 años o más para registrarte");
+        alert("Debes tener 18 años o más para registrarte.");
         fenac.focus();
+        event.preventDefault();
+        return;
+    }
+
+    // Validación estricta de la contraseña al enviar
+    const passRegexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+    if (!passRegexp.test(myInput.value)) {
+        alert("La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula y un número.");
+        myInput.focus();
         event.preventDefault();
         return;
     }
 });
 
-// Función para alternar la visibilidad de la contraseña
 function mostrar() {
     var x = document.getElementById("contrasenia");
     if (x.type === "password") {
